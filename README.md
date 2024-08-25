@@ -10,32 +10,28 @@ The simulation implemented in `2D.cpp` is a classic example of studying the two-
 
 ### 1. The Ising Model
 
-The Ising model considers a two-dimensional lattice of size \( L \times L \), where each site on the lattice has a spin \( s_{ij} \) that can take values of +1 or -1. The spins interact with their nearest neighbors and can also be influenced by an external magnetic field \( B \).
+The Ising model considers a two-dimensional lattice of size $\( L \times L \)$, where each site on the lattice has a spin $\( s_{ij} \)$ that can take values of +1 or -1. The spins interact with their nearest neighbors and can also be influenced by an external magnetic field $\( B \)$.
 
 ### 2. Energy of the System
 
-The total energy of the system, \( E \), is given by the sum of the interaction energy between adjacent spins and the contribution from the external magnetic field. Mathematically, the energy per site is calculated as:
+The total energy of the system, $\( E \)$, is given by the sum of the interaction energy between adjacent spins and the contribution from the external magnetic field. Mathematically, the energy per site is calculated as:
 
-$$
-E = -J \sum_{\langle i,j \rangle} s_{ij} s_{i'j'} - \mu B \sum_{i,j} s_{ij}
-$$
+$E = -J \sum_{\langle i,j \rangle} s_{ij} s_{i'j'} - \mu B \sum_{i,j} s_{ij}$
 
 where:
 
-- \( J \) is the coupling constant between spins (normalized to 1 in the code).
-- \( \langle i,j \rangle \) denotes the sum over nearest neighbors.
-- \( \mu \) is the magnetic moment associated with each spin.
-- \( B \) is the strength of the external magnetic field.
+- $\( J \)$ is the coupling constant between spins (normalized to 1 in the code).
+- $\( \langle i,j \rangle \)$ denotes the sum over nearest neighbors.
+- $\( \mu \)$ is the magnetic moment associated with each spin.
+- $\( B \)$ is the strength of the external magnetic field.
 
 In the code, this formula is implemented in the function `calculate_energy`. For each site on the lattice, the interaction energy is calculated by considering the interactions with the neighboring spins above, below, left, and right. The magnetic field term is added by summing the contribution from each spin in the presence of the external field.
 
 ### 3. Magnetization
 
-The total magnetization, \( M \), is defined as the sum of all the spins in the lattice, normalized by the total number of sites:
+The total magnetization, $\( M \)$, is defined as the sum of all the spins in the lattice, normalized by the total number of sites:
 
-$$
-M = \frac{1}{L^2} \left| \sum_{i,j} s_{ij} \right|
-$$
+$$M = \frac{1}{L^2} \left| \sum_{i,j} s_{ij} \right|$$
 
 In the code, the magnetization is calculated in the function `calculate_magnetization` by summing all the spins and normalizing by the number of sites. The absolute value is taken to obtain the average magnetization.
 
@@ -44,22 +40,20 @@ In the code, the magnetization is calculated in the function `calculate_magnetiz
 The Metropolis algorithm is used to simulate the evolution of the lattice at a given temperature \( T \). The algorithm involves the following steps:
 
 1. Randomly select a site on the lattice.
-2. Calculate the energy difference \( \Delta E \) that would result from flipping the spin at that site:
+2. Calculate the energy difference $\( \Delta E \)$ that would result from flipping the spin at that site:
 
-   $$
-   \Delta E = 2 s_{ij} \left( J \sum_{(i'j')} s_{i'j'} + \mu B \right)
-   $$
+   $$\Delta E = 2 s_{ij} \left( J \sum_{(i'j')} s_{i'j'} + \mu B \right)$$
 
    where the sum is taken over the nearest neighbors of the site \( (i,j) \).
 
-3. If \( \Delta E \leq 0 \), accept the spin flip.
-4. If \( \Delta E > 0 \), accept the spin flip with probability \( \exp(-\Delta E / k_B T) \).
+3. If $\( \Delta E \leq 0 \)$, accept the spin flip.
+4. If $\( \Delta E > 0 \)$, accept the spin flip with probability $\( \exp(-\Delta E / k_B T) \)$.
 
-This process is repeated \( L \times L \) times for each Monte Carlo "sweep", ensuring that each spin on the lattice has the opportunity to be updated.
+This process is repeated $\( L \times L \)$ times for each Monte Carlo "sweep", ensuring that each spin on the lattice has the opportunity to be updated.
 
 ### 5. Heat Capacity
 
-The heat capacity \( C_V \) is a fundamental quantity that measures the system's response to temperature changes. It is calculated as the variance of the energy:
+The heat capacity $\( C_V \)$ is a fundamental quantity that measures the system's response to temperature changes. It is calculated as the variance of the energy:
 
 $$
 C_V = \frac{1}{k_B T^2} \left( \langle E^2 \rangle - \langle E \rangle^2 \right)
