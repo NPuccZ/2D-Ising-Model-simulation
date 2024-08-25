@@ -79,3 +79,13 @@ The entire simulation workflow is managed by a Bash script that compiles the cod
    ```bash
    git clone <repository-url>
    cd <repository-directory>
+2. **Make run.sh executable**:
+   ```bash
+   chmod +x run.sh
+3. **Execute run.sh executable**:
+   ```bash
+   ./run.sh
+Running the script allows the compilation with the command    ```bash
+   g++ -std=c++20 -o 2D 2D.cpp
+
+
