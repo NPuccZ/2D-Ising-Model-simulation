@@ -100,4 +100,7 @@ This command states that the executable 2D has to be run varying the temperature
 For each temperature a file containg the numerical value of the energy, magnetization and specific heat is created, since it is not very easy to deal with many files a script is run that combines them into a single one, containing four columns with the values of temperature and the other thermodynamic quantities stated above. A simple python script reads and plots the variables as functions of the temperature. The last step is the creation of the animation that represent the evoulution of the system. To make the program more efficient only for three values of temperature the evoulution is animated, in particular for T=1.6, 2,3 and 3.3.
 Details and results can be found in the PDF file in the repository. Results are presented for a lattice of dimension 40 x 40, it can be modified by changing the proper line in 2D.cpp, the same holds true for the number of sweeps which is kept fixed at 300000.
 ## Results
-![Alt Text](results/Energy_vs_Temperature.png)
+As visible from the plot below the transition between the ferromagnetic phase and the paramagnetic phase, corresponding to the temperature where the peak is visible, is compatible with the theoretical prediction of T=2.269.
+![Alt Text](results/HeatCapacity_vs_Temperature.png)
+Moreover you can also appreciate the fact that the analytical solution of the magnetization for the ferromagnetic phase is compatible with the numerical results:
+![Alt Text](results/Magnetization_vs_Temperature.png)
