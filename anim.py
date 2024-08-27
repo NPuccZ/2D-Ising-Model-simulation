@@ -14,7 +14,7 @@ folder_path = sys.argv[1]
 temperature = float(sys.argv[2])
 
 # Configuration
-step_range = range(0, 300000, 100)  # From step 0 to step 9900 in increments of 100
+step_range = range(0, 300000, 100)  # From step 0 to step 299900 in increments of 100
 gif_filename = f'animation_{temperature:.1f}.gif'
 
 # Function to create an image of the lattice
