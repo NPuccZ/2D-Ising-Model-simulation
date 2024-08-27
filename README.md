@@ -106,5 +106,5 @@ Moreover you can also appreciate the fact that the analytical solution of the ma
 ![Alt Text](results/Magnetization_vs_Temperature.png)
 Look at the pdf file for further results.
 ## References
-1] Huang, Kerson. Statistical mechanics. John Wiley & Sons, 2008.
+1] Huang, Kerson. Statistical mechanics. John Wiley & Sons, 2008. <br>
 2] Organtini, Giovanni, et al. "Programmazione Scientifica Linguaggio C, algoritmi e modelli nella scienza." (2019).
