@@ -99,4 +99,5 @@ seq 1.6 0.01 3.3 | xargs -I{} -P 8 bash -c './2D {} $RANDOM 0.0'
 This command states that the executable 2D has to be run varying the temperature from 1.6 up to 3.3 with steps of 0.01, then the code is run with eight processes in parallel, the arguments of 2D are the temperature, the seed for the random number generator and the magnetic field, in this case set to zero.
 For each temperature a file containg the numerical value of the energy, magnetization and specific heat is created, since it is not very easy to deal with many files a script is run that combines them into a single one, containing four columns with the values of temperature and the other thermodynamic quantities stated above. A simple python script reads and plots the variables as functions of the temperature. The last step is the creation of the animation that represent the evoulution of the system. To make the program more efficient only for three values of temperature the evoulution is animated, in particular for T=1.6, 2,3 and 3.3.
 Details and results can be found in the PDF file in the repository. Results are presented for a lattice of dimension 40 x 40, it can be modified by changing the proper line in 2D.cpp, the same holds true for the number of sweeps which is kept fixed at 300000.
-
+## Results
+![Alt Text](results/Energy_vs_Temperature.png)
