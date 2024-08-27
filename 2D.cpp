@@ -16,7 +16,7 @@ namespace fs = std::filesystem;
 using namespace std;
 
 // Model constants
-const int L = 50;  // Lattice size (width)
+const int L = 40;  // Lattice size (width)
 const int n = 300000;  // Number of Monte Carlo sweeps
 const double mu = 1.0;  // Magnetic moment of each spin
 
