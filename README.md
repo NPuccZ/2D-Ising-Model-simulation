@@ -104,3 +104,7 @@ As visible from the plot below the transition between the ferromagnetic phase an
 ![Alt Text](results/HeatCapacity_vs_Temperature.png)
 Moreover you can also appreciate the fact that the analytical solution of the magnetization for the ferromagnetic phase is compatible with the numerical results:
 ![Alt Text](results/Magnetization_vs_Temperature.png)
+Look at the pdf file for further results.
+## References
+1] Huang, Kerson. Statistical mechanics. John Wiley & Sons, 2008.
+2] Organtini, Giovanni, et al. "Programmazione Scientifica Linguaggio C, algoritmi e modelli nella scienza." (2019).
