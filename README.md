@@ -78,9 +78,10 @@ The entire simulation workflow is managed by a Bash script that compiles the cod
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/NPuccZ/2D-Ising-Model-simulation
-
+   ```
    ```bash
    cd 2D-Ising-Model-simulation
+   ```
 2. **Make run.sh executable**:
    ```bash
    chmod +x run.sh
